@@ -8,5 +8,12 @@ before_deploy:
     git tag ${gittag};
     fi
 deploy:
-  provider: pages:git
-  deploy_key: $GH_TOKEN
+  provider: releases
+  token: $GH_TOKEN
+  overwrite: true
+  file: 
+    - mapRegions.json
+    - staStations.json
+  cleanup: false
+  on:
+    tags: false

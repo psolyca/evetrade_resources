@@ -89,12 +89,12 @@ def importYaml():
         map_regions.append(region)
 
     map_region = sorted(map_regions, key = lambda i: i['regionID'])
-    with open('mapRegions.json', 'w') as outfile:
+    with open('resources/mapRegions.json', 'w') as outfile:
         json.dump(map_region, outfile, separators = (',', ':'))
 
     print("Converting stations data")
     with open(r'sde/bsd/staStations.yaml') as infile:
-        with open('staStations.json', 'w') as outfile:
+        with open('resources/staStations.json', 'w') as outfile:
             json.dump(yaml.load(infile, Loader = Loader), outfile, separators = (',', ':'))
 
 getResources()

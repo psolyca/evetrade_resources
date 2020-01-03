@@ -1,6 +1,6 @@
 env:
   global:
-    - secure: "my_encoded_GH_USER_EMAIL_and_GH_USER_NAME"
+    - secure: "okzCgCH5MF+jspHpPvGKkS3+aP5wlGgKnNaAybfGQpWyhdbI6pTvEbe1I4kFW9dX+Mc2T12JWFwbhKx5n5DqYcUk9SquxBySe9DaZveEGeD6QwRa8BR+FiSOt3jxlpqtYYT6FLUSGJSu+PMuCQXdZ9v1y+5yTX3Zi5GZj1xcr8L2BXxv9a/BU7ZHxW4Rh2MNZpWZxIzQopwbwQh9yCzvrLHzsZfMpM4aNfSax7xYc3p5PpV26SR95Q4fUIVIodvFPS8mWJeHI6BAdLpuguo9hePO/WKN9E4xRLBn4IjZtNt9+w2DZYC5z6oLO7rAj2DbEqCZ0vQn+GzPmYNAjw/AjT9QH4AHToK6xxFxxOdehNgVT4Os+SyOVx9YQ7WhgRZ8pE1z0V7NN+eyBmtf/8xv+GZ4tcqJctc8nja8NIwcS5G037/H7Gy1KfayEAGglc0iWxAupt3rcYrZeUYGBvwMOAuEL/B4RHF7hFjS2fjXu4LQmRD14K9p/pY4/cuhUTlxBmBy6Uf3dGUzOS8++R3bLfkc5WSQ/WEvEV5y0pbYzwJCkQCfFFgeDhXxP+SMy9IQxLdDC/+9tal1Wo2uoRvU0QuZpgY1dT5b5cwd2qEAgT68u0QvtsBedv6y0Gaeb8AD7VDalT+ixB/mot/oi/nXqcolBVzPOewH2X1+w2/VHqU="
 install:
   skip
 before_script:
@@ -12,8 +12,8 @@ before_script:
        # Decrypt the file containing the private key
 
        openssl aes-256-cbc \
-         -K $encrypted_xxxxxxxxxxxx_key \
-         -iv $encrypted_xxxxxxxxxxxx_iv \
+         -K $encrypted_46d5c4daa580_key \
+         -iv $encrypted_46d5c4daa580_iv \
          -in ".travis/github_deploy_key.enc" \
          -out "$SSH_FILE" -d
 
